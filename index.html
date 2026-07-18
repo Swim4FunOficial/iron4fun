@@ -1,707 +1,774 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IRON4FUN Cascais</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                navy: "#08284B",
-                blue: "#0C3B68",
-                gold: "#F4BE2A",
-                sky: "#DDECF8",
-                ink: "#12304B",
-              },
-            },
-            fontFamily: {
-              display: ["Sora", "sans-serif"],
-              body: ["Barlow", "sans-serif"],
-            },
-            boxShadow: {
-              soft: "0 18px 60px rgba(8, 40, 75, 0.12)",
-            },
-            backgroundImage: {
-              "hero-photo":
-                "linear-gradient(90deg, rgba(7,33,62,0.96) 0%, rgba(7,33,62,0.78) 34%, rgba(7,33,62,0.25) 60%, rgba(7,33,62,0.72) 100%), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80')",
-              "swim-photo":
-                "url('https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80')",
-              "coach-photo":
-                "url('https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=900&q=80')",
-              "shore-photo":
-                "linear-gradient(90deg, rgba(8,40,75,0.88) 0%, rgba(8,40,75,0.64) 46%, rgba(8,40,75,0.28) 100%), url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80')",
-              "deep-water":
-                "radial-gradient(circle at top, rgba(17,70,118,0.7), rgba(8,40,75,0.98) 58%)",
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IRON4FUN Cascais</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: "#08284B",
+              blue: "#0C3B68",
+              gold: "#F4BE2A",
+              sky: "#DDECF8",
+              ink: "#12304B",
             },
           },
+          fontFamily: {
+            display: ["Sora", "sans-serif"],
+            body: ["Barlow", "sans-serif"],
+          },
+          boxShadow: {
+            soft: "0 18px 60px rgba(8, 40, 75, 0.12)",
+          },
+          backgroundImage: {
+            "hero-photo":
+              "linear-gradient(90deg, rgba(7,33,62,0.96) 0%, rgba(7,33,62,0.78) 34%, rgba(7,33,62,0.25) 60%, rgba(7,33,62,0.72) 100%), url('assets/hero_swim.jpg')",
+            "swim-photo":
+              "url('assets/swim_action.png')",
+            "coach-photo":
+              "url('assets/coach_portrait.png')",
+            "shore-photo":
+              "linear-gradient(90deg, rgba(8,40,75,0.88) 0%, rgba(8,40,75,0.64) 46%, rgba(8,40,75,0.28) 100%), url('assets/shore_view.png')",
+            "deep-water":
+              "radial-gradient(circle at top, rgba(17,70,118,0.7), rgba(8,40,75,0.98) 58%)",
+          },
         },
-      };
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="bg-slate-50 font-body text-brand-ink">
-    <header class="bg-brand-navy text-white">
-      <div
-        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8"
-      >
-        <div class="leading-none">
-          <div class="font-display text-3xl font-extrabold tracking-tight">
-            SWIM
-          </div>
-          <div class="-mt-1 text-right text-3xl font-extrabold text-sky-300">
-            4FUN
-          </div>
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="bg-slate-50 font-body text-brand-ink">
+  <header class="bg-brand-navy text-white">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <div class="leading-none">
+        <div class="font-display text-3xl font-extrabold tracking-tight">
+          IRON
         </div>
-        <nav class="hidden items-center gap-8 text-sm font-semibold uppercase tracking-[0.18em] lg:flex">
-          <a class="transition hover:text-brand-gold" href="#overview">Overview</a>
-          <a class="transition hover:text-brand-gold" href="#dates">Dates</a>
-          <a class="transition hover:text-brand-gold" href="#included">Included</a>
-          <a class="transition hover:text-brand-gold" href="#coach">Coach</a>
-          <a class="transition hover:text-brand-gold" href="#pricing">Pricing</a>
-          <a class="transition hover:text-brand-gold" href="#faq">FAQ</a>
-        </nav>
-        <a
-          href="#register"
-          class="rounded-full bg-brand-gold px-5 py-3 text-sm font-extrabold uppercase tracking-[0.15em] text-brand-navy transition hover:scale-[1.02]"
-        >
-          Pre-register now
-        </a>
+        <div class="-mt-1 text-right text-3xl font-extrabold text-sky-300">
+          4FUN
+        </div>
       </div>
-    </header>
+      <nav class="hidden items-center gap-8 text-sm font-semibold uppercase tracking-[0.18em] lg:flex">
+        <a class="transition hover:text-brand-gold" href="#overview">Overview</a>
+        <a class="transition hover:text-brand-gold" href="#dates">Dates</a>
+        <a class="transition hover:text-brand-gold" href="#included">Included</a>
+        <a class="transition hover:text-brand-gold" href="#coach">Coach</a>
+        <a class="transition hover:text-brand-gold" href="#pricing">Pricing</a>
+        <a class="transition hover:text-brand-gold" href="#faq">FAQ</a>
+      </nav>
+      <a href="#register"
+        class="rounded-full bg-brand-gold px-5 py-3 text-sm font-extrabold uppercase tracking-[0.15em] text-brand-navy transition hover:scale-[1.02]">
+        Pre-register now
+      </a>
+    </div>
+  </header>
 
-    <main>
-      <section
-        id="overview"
-        class="bg-hero-photo bg-cover bg-center text-white"
-      >
-        <div class="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-24">
-          <div class="max-w-xl">
-            <p class="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-sky-200">
-              Open water training camp
-            </p>
-            <h1 class="font-display text-5xl font-extrabold uppercase leading-[0.9] md:text-7xl">
-              IRON4FUN
-              <span class="block">Cascais</span>
-            </h1>
-            <p class="mt-6 text-2xl font-semibold text-slate-100">
-              Train the Ironman Cascais swim course before race day.
-            </p>
-            <p class="mt-5 max-w-lg text-lg leading-relaxed text-slate-200">
-              Guided open water reconnaissance sessions for athletes racing
-              IRONMAN Portugal-Cascais and IRONMAN 70.3 Portugal-Cascais.
-            </p>
-
-            <div class="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-              <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
-                <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-brand-gold">
-                  Local expertise
-                </p>
-                <p class="mt-2 text-sm text-slate-200">Course insights from coaches who know Cascais deeply.</p>
-              </div>
-              <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
-                <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-brand-gold">
-                  Ocean knowledge
-                </p>
-                <p class="mt-2 text-sm text-slate-200">Understand currents, buoy lines and start positioning.</p>
-              </div>
-              <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
-                <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-brand-gold">
-                  Safety support
-                </p>
-                <p class="mt-2 text-sm text-slate-200">Structured sessions with close supervision and briefings.</p>
-              </div>
-              <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
-                <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-brand-gold">
-                  Race preparation
-                </p>
-                <p class="mt-2 text-sm text-slate-200">Arrive calmer, smarter and more confident for race morning.</p>
-              </div>
-            </div>
-
-            <div class="mt-10 flex flex-wrap gap-4">
-              <a
-                href="#register"
-                class="rounded-full bg-brand-gold px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-brand-navy shadow-soft transition hover:-translate-y-0.5"
-              >
-                Pre-register now
-              </a>
-              <a
-                href="#dates"
-                class="rounded-full border border-white/70 px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-white transition hover:bg-white hover:text-brand-navy"
-              >
-                View dates
-              </a>
-            </div>
-          </div>
-
-          <div class="flex items-end justify-end">
-            <div class="rounded-full border-4 border-white/70 px-8 py-10 text-center backdrop-blur-sm">
-              <p class="font-display text-3xl font-extrabold uppercase tracking-[0.2em]">
-                Train smart
-              </p>
-              <p class="mt-3 text-lg font-semibold uppercase tracking-[0.25em]">
-                Race confident
-              </p>
-              <div class="mx-auto mt-5 h-px w-24 bg-white/70"></div>
-              <p class="mt-4 text-sm uppercase tracking-[0.35em] text-slate-200">
-                Swim4Fun Cascais
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="border-y border-slate-200 bg-brand-sky/80">
-        <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-10 gap-y-4 px-6 py-5 text-sm font-bold uppercase tracking-[0.16em] text-brand-navy lg:px-8">
-          <span>Spain</span>
-          <span>France</span>
-          <span>United Kingdom</span>
-          <span>Germany</span>
-          <span>Netherlands</span>
-          <span>Ireland</span>
-          <span class="text-slate-500">Athletes from all over Europe are welcome.</span>
-        </div>
-      </section>
-
-      <section class="bg-white py-20">
-        <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
-          <div class="overflow-hidden rounded-[2rem] shadow-soft">
-            <div class="h-full min-h-[320px] bg-swim-photo bg-cover bg-center"></div>
-          </div>
-          <div class="flex items-center">
-            <div>
-              <p class="text-sm font-extrabold uppercase tracking-[0.3em] text-sky-700">
-                Why train the course?
-              </p>
-              <h2 class="mt-3 max-w-md font-display text-4xl font-extrabold leading-tight text-brand-navy md:text-5xl">
-                Know the course. Understand the ocean. Race with confidence.
-              </h2>
-              <p class="mt-6 text-lg leading-relaxed text-slate-600">
-                The Atlantic Ocean is beautiful, but race day is not the ideal
-                moment to discover the course.
-              </p>
-              <p class="mt-4 text-lg leading-relaxed text-slate-600">
-                Iron4Fun helps you learn the venue, practice navigation,
-                understand local conditions and arrive at the start line with
-                confidence.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="dates" class="bg-deep-water py-20 text-white">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="text-center">
-            <p class="text-sm font-bold uppercase tracking-[0.35em] text-sky-300">
-              2026 sessions
-            </p>
-            <h2 class="mt-3 font-display text-4xl font-extrabold">
-              Choose your session
-            </h2>
-          </div>
-
-          <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-6">
-            <article class="rounded-[1.75rem] border border-white/25 bg-white/5 p-6 text-center backdrop-blur">
-              <p class="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold">02 August</p>
-              <p class="mt-4 text-4xl font-extrabold">70.3</p>
-              <p class="mt-2 text-xl font-semibold">1.9 KM</p>
-            </article>
-            <article class="rounded-[1.75rem] border border-white/25 bg-white/5 p-6 text-center backdrop-blur">
-              <p class="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold">23 August</p>
-              <p class="mt-4 text-4xl font-extrabold">FULL</p>
-              <p class="mt-2 text-xl font-semibold">3.8 KM</p>
-            </article>
-            <article class="rounded-[1.75rem] border border-white/25 bg-white/5 p-6 text-center backdrop-blur">
-              <p class="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold">13 September</p>
-              <p class="mt-4 text-4xl font-extrabold">70.3</p>
-              <p class="mt-2 text-xl font-semibold">1.9 KM</p>
-            </article>
-            <article class="rounded-[1.75rem] border border-white/25 bg-white/5 p-6 text-center backdrop-blur">
-              <p class="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold">04 October</p>
-              <p class="mt-4 text-4xl font-extrabold">FULL</p>
-              <p class="mt-2 text-xl font-semibold">3.8 KM</p>
-            </article>
-            <article class="rounded-[1.75rem] border border-white/25 bg-white/5 p-6 text-center backdrop-blur">
-              <p class="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold">11 October</p>
-              <p class="mt-4 text-4xl font-extrabold">70.3</p>
-              <p class="mt-2 text-xl font-semibold">1.9 KM</p>
-            </article>
-            <article class="rounded-[1.75rem] border border-white/25 bg-white/5 p-6 text-center backdrop-blur">
-              <p class="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold">14 October</p>
-              <p class="mt-4 text-4xl font-extrabold">70.3</p>
-              <p class="mt-2 text-xl font-semibold">1.9 KM</p>
-            </article>
-          </div>
-
-          <div class="mt-10 text-center">
-            <a
-              href="#register"
-              class="inline-flex rounded-full bg-brand-gold px-8 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-brand-navy transition hover:-translate-y-0.5"
-            >
-              Pre-register for your session
-            </a>
-            <p class="mt-4 text-sm text-sky-100/80">
-              Sessions are confirmed according to sea conditions and minimum number of participants.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="included" class="bg-white py-20">
-        <div class="mx-auto grid max-w-7xl gap-0 overflow-hidden rounded-[2rem] bg-slate-50 shadow-soft lg:grid-cols-[1.15fr_0.85fr]">
-          <div class="px-8 py-10 md:px-12">
-            <p class="text-sm font-extrabold uppercase tracking-[0.3em] text-sky-700">
-              What's included?
-            </p>
-            <div class="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
-              <div><p class="font-bold text-brand-navy">Guided open water swim</p><p class="mt-2 text-sm text-slate-600">Supported recon sessions on the course.</p></div>
-              <div><p class="font-bold text-brand-navy">Course familiarisation</p><p class="mt-2 text-sm text-slate-600">Start, exit and sighting strategy review.</p></div>
-              <div><p class="font-bold text-brand-navy">Local navigation tips</p><p class="mt-2 text-sm text-slate-600">Positioning, landmarks and buoy approach.</p></div>
-              <div><p class="font-bold text-brand-navy">Ocean reading guidance</p><p class="mt-2 text-sm text-slate-600">How wind and chop affect your line.</p></div>
-              <div><p class="font-bold text-brand-navy">Coach briefing</p><p class="mt-2 text-sm text-slate-600">Session plan and pacing before entering.</p></div>
-              <div><p class="font-bold text-brand-navy">Safety support</p><p class="mt-2 text-sm text-slate-600">Monitored swim with clear group structure.</p></div>
-              <div><p class="font-bold text-brand-navy">Community experience</p><p class="mt-2 text-sm text-slate-600">Train with athletes preparing for the same race.</p></div>
-              <div><p class="font-bold text-brand-navy">Post-session Q&amp;A</p><p class="mt-2 text-sm text-slate-600">Debrief, next steps and confidence building.</p></div>
-            </div>
-          </div>
-          <div id="coach" class="grid bg-white md:grid-cols-[0.95fr_1.05fr] lg:grid-cols-1 xl:grid-cols-[0.95fr_1.05fr]">
-            <div class="min-h-[360px] bg-coach-photo bg-cover bg-center"></div>
-            <div class="px-8 py-10">
-              <p class="text-sm font-extrabold uppercase tracking-[0.3em] text-sky-700">
-                Meet your coach
-              </p>
-              <h3 class="mt-3 font-display text-4xl font-extrabold text-brand-navy">
-                Bibiana Farias
-              </h3>
-              <p class="mt-4 text-lg font-semibold text-slate-700">
-                Open water swimming coach and founder of Swim4fun.
-              </p>
-              <p class="mt-4 leading-relaxed text-slate-600">
-                She has guided more than 200 athletes in their open water
-                challenges and regularly organizes training events for
-                long-distance preparation.
-              </p>
-              <p class="mt-4 leading-relaxed text-slate-600">
-                Bibiana competes in the Portuguese National Open Water Circuit
-                and has raced at 70.3 and full distance events herself.
-              </p>
-              <a
-                href="#register"
-                class="mt-6 inline-flex text-sm font-extrabold uppercase tracking-[0.15em] text-sky-700 transition hover:text-brand-navy"
-              >
-                Learn more about Bibiana →
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="pricing" class="bg-slate-100 py-20">
-        <div class="mx-auto max-w-5xl px-6 lg:px-8">
-          <div class="text-center">
-            <p class="text-sm font-extrabold uppercase tracking-[0.35em] text-sky-700">
-              Pricing
-            </p>
-          </div>
-
-          <div class="mt-8 grid gap-6 lg:grid-cols-2">
-            <article class="rounded-[2rem] bg-white p-8 shadow-soft">
-              <h3 class="font-display text-3xl font-extrabold text-brand-navy">
-                IRON4FUN 70.3
-              </h3>
-              <p class="mt-2 text-slate-600">
-                For athletes preparing for the 1.9 km swim.
-              </p>
-              <div class="mt-8 grid grid-cols-2 gap-4 border-t border-slate-200 pt-6">
-                <div>
-                  <p class="text-sm font-bold uppercase tracking-[0.15em] text-slate-400">
-                    Students &amp; members
-                  </p>
-                  <p class="mt-3 text-5xl font-extrabold text-brand-navy">15€</p>
-                </div>
-                <div>
-                  <p class="text-sm font-bold uppercase tracking-[0.15em] text-slate-400">
-                    External athletes
-                  </p>
-                  <p class="mt-3 text-5xl font-extrabold text-brand-navy">20€</p>
-                </div>
-              </div>
-              <a
-                href="#register"
-                class="mt-8 inline-flex rounded-full bg-brand-gold px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-brand-navy transition hover:-translate-y-0.5"
-              >
-                Pre-register for 70.3
-              </a>
-            </article>
-
-            <article class="rounded-[2rem] bg-white p-8 shadow-soft">
-              <h3 class="font-display text-3xl font-extrabold text-brand-navy">
-                IRON4FUN Full
-              </h3>
-              <p class="mt-2 text-slate-600">
-                For athletes preparing for the 3.8 km swim.
-              </p>
-              <div class="mt-8 grid grid-cols-2 gap-4 border-t border-slate-200 pt-6">
-                <div>
-                  <p class="text-sm font-bold uppercase tracking-[0.15em] text-slate-400">
-                    Students &amp; members
-                  </p>
-                  <p class="mt-3 text-5xl font-extrabold text-brand-navy">25€</p>
-                </div>
-                <div>
-                  <p class="text-sm font-bold uppercase tracking-[0.15em] text-slate-400">
-                    External athletes
-                  </p>
-                  <p class="mt-3 text-5xl font-extrabold text-brand-navy">30€</p>
-                </div>
-              </div>
-              <a
-                href="#register"
-                class="mt-8 inline-flex rounded-full bg-brand-gold px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-brand-navy transition hover:-translate-y-0.5"
-              >
-                Pre-register for Full
-              </a>
-            </article>
-          </div>
-
-          <p class="mt-6 text-center text-sm text-slate-500">
-            Insurance may be required if not already active. Payment details are sent after pre-registration validation.
+  <main>
+    <section id="overview" class="bg-hero-photo bg-cover bg-center text-white">
+      <div class="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-24">
+        <div class="max-w-2xl">
+          <p class="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-sky-200">
+            IRONMAN Cascais swim course familiarisation
           </p>
-        </div>
-      </section>
+          <h1 class="font-display text-5xl font-extrabold uppercase leading-[0.9] md:text-7xl">
+            IRON4FUN
+            <span class="block">Cascais</span>
+          </h1>
+          <p class="mt-6 text-2xl font-semibold text-slate-100">
+            Train the IRONMAN Cascais swim course before race day.
+          </p>
+          <p class="mt-2 text-sm font-bold uppercase tracking-[0.12em] text-brand-gold">
+            Local coaches &middot; English briefing &middot; Kayak support &middot; Race-specific navigation
+          </p>
+          <p class="mt-5 max-w-lg text-lg leading-relaxed text-slate-200">
+            Guided open water reconnaissance sessions for athletes racing
+            IRONMAN Portugal-Cascais and IRONMAN 70.3 Portugal-Cascais.
+          </p>
 
-      <section class="bg-white py-20">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="text-center">
-            <p class="text-sm font-extrabold uppercase tracking-[0.35em] text-sky-700">
-              How it works
-            </p>
+          <div class="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+              <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-brand-gold">
+                Local expertise
+              </p>
+              <p class="mt-2 text-sm text-slate-200">Course insights from coaches who know Cascais deeply.</p>
+            </div>
+            <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+              <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-brand-gold">
+                Ocean knowledge
+              </p>
+              <p class="mt-2 text-sm text-slate-200">Understand currents, buoy lines and start positioning.</p>
+            </div>
+            <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+              <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-brand-gold">
+                Safety support
+              </p>
+              <p class="mt-2 text-sm text-slate-200">Structured sessions with close supervision and briefings.</p>
+            </div>
+            <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+              <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-brand-gold">
+                Race preparation
+              </p>
+              <p class="mt-2 text-sm text-slate-200">Arrive calmer, smarter and more confident for race morning.</p>
+            </div>
           </div>
-          <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            <article class="rounded-[1.75rem] bg-slate-50 p-6 text-center shadow-soft">
-              <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-sky-100 text-2xl">1</div>
-              <h3 class="mt-5 font-display text-xl font-extrabold text-brand-navy">Pre-register</h3>
-              <p class="mt-3 text-slate-600">Fill in the form with your race distance, preferred date and open water experience.</p>
-            </article>
-            <article class="rounded-[1.75rem] bg-slate-50 p-6 text-center shadow-soft">
-              <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-sky-100 text-2xl">2</div>
-              <h3 class="mt-5 font-display text-xl font-extrabold text-brand-navy">We validate your spot</h3>
-              <p class="mt-3 text-slate-600">We confirm availability, level group, insurance needs and sea-condition planning.</p>
-            </article>
-            <article class="rounded-[1.75rem] bg-slate-50 p-6 text-center shadow-soft">
-              <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-sky-100 text-2xl">3</div>
-              <h3 class="mt-5 font-display text-xl font-extrabold text-brand-navy">Payment confirmation</h3>
-              <p class="mt-3 text-slate-600">You receive the payment details and your place is confirmed after payment.</p>
-            </article>
-            <article class="rounded-[1.75rem] bg-slate-50 p-6 text-center shadow-soft">
-              <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-sky-100 text-2xl">4</div>
-              <h3 class="mt-5 font-display text-xl font-extrabold text-brand-navy">Join the session group</h3>
-              <p class="mt-3 text-slate-600">You receive all details: meeting point, schedule, equipment and briefing.</p>
-            </article>
-          </div>
-        </div>
-      </section>
 
-      <section class="bg-slate-100">
-        <div class="mx-auto grid max-w-7xl lg:grid-cols-[1fr_1.05fr]">
-          <div class="bg-shore-photo bg-cover bg-center px-8 py-16 text-white md:px-12">
-            <h2 class="max-w-sm font-display text-4xl font-extrabold uppercase leading-tight">
-              Arrive at the start line with confidence.
-            </h2>
-            <p class="mt-5 max-w-md text-lg text-slate-100">
-              Train the course. Understand the ocean. Race prepared.
-            </p>
-            <a
-              href="#register"
-              class="mt-8 inline-flex rounded-full bg-brand-gold px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-brand-navy transition hover:-translate-y-0.5"
-            >
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="#register"
+              class="rounded-full bg-brand-gold px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-brand-navy shadow-soft transition hover:-translate-y-0.5">
               Pre-register now
             </a>
-            <p class="mt-4 text-sm text-slate-200">
-              Limited spots. Minimum group: 10 athletes.
+            <a href="#dates"
+              class="rounded-full border border-white/70 px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-white transition hover:bg-white hover:text-brand-navy">
+              View dates
+            </a>
+          </div>
+        </div>
+
+        <div class="flex items-end justify-end">
+          <div class="rounded-2xl border-4 border-white/70 px-8 py-10 text-center backdrop-blur-sm">
+            <p class="font-display text-3xl font-extrabold uppercase tracking-[0.2em]">
+              70.3 and Full
+            </p>
+            <p class="mt-3 text-lg font-semibold uppercase tracking-[0.25em]">
+              Race with confidence
+            </p>
+            <div class="mx-auto mt-5 h-px w-24 bg-white/70"></div>
+            <p class="mt-4 text-sm uppercase tracking-[0.35em] text-slate-200">
+              Iron4Fun Cascais
             </p>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div id="faq" class="bg-white px-8 py-16 md:px-12">
+    <section class="border-y border-slate-200 bg-brand-sky/80">
+      <div
+        class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-10 gap-y-4 px-6 py-5 text-sm font-bold uppercase tracking-[0.16em] text-brand-navy lg:px-8">
+        <span>Spain</span>
+        <span>France</span>
+        <span>United Kingdom</span>
+        <span>Germany</span>
+        <span>Netherlands</span>
+        <span>Ireland</span>
+        <span class="text-slate-500">Athletes from all over Europe are welcome.</span>
+      </div>
+    </section>
+
+    <section class="bg-white py-20">
+      <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+        <div class="overflow-hidden rounded-[2rem] shadow-soft">
+          <div class="h-full min-h-[320px] bg-swim-photo bg-cover bg-center"></div>
+        </div>
+        <div class="flex items-center">
+          <div>
             <p class="text-sm font-extrabold uppercase tracking-[0.3em] text-sky-700">
-              FAQ
+              Why train the course?
             </p>
-            <div class="mt-8 divide-y divide-slate-200 rounded-[1.5rem] border border-slate-200">
-              <details class="group p-5" open>
-                <summary class="flex cursor-pointer list-none items-center justify-between font-bold text-brand-navy">
-                  Is Iron4Fun an official IRONMAN activity?
-                  <span class="text-2xl text-sky-700 transition group-open:rotate-45">+</span>
-                </summary>
-                <p class="mt-4 text-slate-600">No. It is an independent guided swim training session designed to help athletes prepare safely for race day.</p>
-              </details>
-              <details class="group p-5">
-                <summary class="flex cursor-pointer list-none items-center justify-between font-bold text-brand-navy">
-                  Can international athletes join?
-                  <span class="text-2xl text-sky-700 transition group-open:rotate-45">+</span>
-                </summary>
-                <p class="mt-4 text-slate-600">Yes. Sessions welcome athletes from across Europe and beyond, as long as they meet the required swim level.</p>
-              </details>
-              <details class="group p-5">
-                <summary class="flex cursor-pointer list-none items-center justify-between font-bold text-brand-navy">
-                  Do I need to be a Swim4fun member?
-                  <span class="text-2xl text-sky-700 transition group-open:rotate-45">+</span>
-                </summary>
-                <p class="mt-4 text-slate-600">No. Members receive a special rate, but external athletes are welcome.</p>
-              </details>
-              <details class="group p-5">
-                <summary class="flex cursor-pointer list-none items-center justify-between font-bold text-brand-navy">
-                  Do I need a wetsuit?
-                  <span class="text-2xl text-sky-700 transition group-open:rotate-45">+</span>
-                </summary>
-                <p class="mt-4 text-slate-600">Usually yes, depending on the season and water temperature. Final guidance is shared before your session.</p>
-              </details>
-              <details class="group p-5">
-                <summary class="flex cursor-pointer list-none items-center justify-between font-bold text-brand-navy">
-                  What level do I need?
-                  <span class="text-2xl text-sky-700 transition group-open:rotate-45">+</span>
-                </summary>
-                <p class="mt-4 text-slate-600">You should be comfortable swimming the chosen distance continuously in open water. The form helps us group athletes correctly.</p>
-              </details>
-              <details class="group p-5">
-                <summary class="flex cursor-pointer list-none items-center justify-between font-bold text-brand-navy">
-                  Are places limited?
-                  <span class="text-2xl text-sky-700 transition group-open:rotate-45">+</span>
-                </summary>
-                <p class="mt-4 text-slate-600">Yes. Each session has a maximum group size to preserve safety and coaching quality.</p>
-              </details>
+            <h2 class="mt-3 max-w-md font-display text-4xl font-extrabold leading-tight text-brand-navy md:text-5xl">
+              Know the course. Understand the ocean. Race with confidence.
+            </h2>
+            <p class="mt-6 text-lg leading-relaxed text-slate-600">
+              The Atlantic Ocean is beautiful, but race day is not the ideal
+              moment to discover the course.
+            </p>
+            <p class="mt-4 text-lg leading-relaxed text-slate-600">
+              Iron4Fun helps you learn the venue, practice navigation,
+              understand local conditions and arrive at the start line with
+              confidence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dates" class="bg-deep-water py-20 text-white">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="text-center">
+          <p class="text-sm font-bold uppercase tracking-[0.35em] text-sky-300">
+            2026 sessions
+          </p>
+          <h2 class="mt-3 font-display text-4xl font-extrabold">
+            Choose your session
+          </h2>
+        </div>
+
+        <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-6">
+          <article class="rounded-[1.75rem] border border-white/25 bg-white/5 p-6 text-center backdrop-blur">
+            <p class="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold">02 August</p>
+            <p class="mt-4 text-4xl font-extrabold">70.3</p>
+            <p class="mt-2 text-xl font-semibold">1.9 KM</p>
+          </article>
+          <article class="rounded-[1.75rem] border border-white/25 bg-white/5 p-6 text-center backdrop-blur">
+            <p class="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold">23 August</p>
+            <p class="mt-4 text-4xl font-extrabold">FULL</p>
+            <p class="mt-2 text-xl font-semibold">3.8 KM</p>
+          </article>
+          <article class="rounded-[1.75rem] border border-white/25 bg-white/5 p-6 text-center backdrop-blur">
+            <p class="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold">13 September</p>
+            <p class="mt-4 text-4xl font-extrabold">70.3</p>
+            <p class="mt-2 text-xl font-semibold">1.9 KM</p>
+          </article>
+          <article class="rounded-[1.75rem] border border-white/25 bg-white/5 p-6 text-center backdrop-blur">
+            <p class="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold">04 October</p>
+            <p class="mt-4 text-4xl font-extrabold">FULL</p>
+            <p class="mt-2 text-xl font-semibold">3.8 KM</p>
+          </article>
+          <article class="rounded-[1.75rem] border border-white/25 bg-white/5 p-6 text-center backdrop-blur">
+            <p class="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold">11 October</p>
+            <p class="mt-4 text-4xl font-extrabold">70.3</p>
+            <p class="mt-2 text-xl font-semibold">1.9 KM</p>
+          </article>
+          <article class="rounded-[1.75rem] border border-white/25 bg-white/5 p-6 text-center backdrop-blur">
+            <p class="text-sm font-bold uppercase tracking-[0.25em] text-brand-gold">14 October</p>
+            <p class="mt-4 text-4xl font-extrabold">70.3</p>
+            <p class="mt-2 text-xl font-semibold">1.9 KM</p>
+          </article>
+        </div>
+
+        <div class="mt-10 text-center">
+          <a href="#register"
+            class="inline-flex rounded-full bg-brand-gold px-8 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-brand-navy transition hover:-translate-y-0.5">
+            Pre-register for your session
+          </a>
+          <p class="mt-4 text-sm text-sky-100/80">
+            Sessions are confirmed according to sea conditions and minimum number of participants.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="planning" class="bg-slate-50 py-20 border-b border-slate-200">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="text-sm font-extrabold uppercase tracking-[0.35em] text-sky-700">
+            Logistics
+          </p>
+          <h2 class="mt-3 font-display text-4xl font-extrabold text-brand-navy">
+            Planning your session
+          </h2>
+          <p class="mt-4 text-lg text-slate-600">
+            International athletes are welcome. Sessions are conducted in English and Portuguese.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          <!-- Location -->
+          <div class="rounded-2xl bg-white p-6 shadow-soft border border-slate-100 flex flex-col justify-between">
+            <div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-50 text-sky-700 text-2xl mb-4">
+                📍
+              </div>
+              <h3 class="font-display text-lg font-bold text-brand-navy">Location</h3>
+              <p class="mt-2 text-sm text-slate-600">Cascais Bay, approximately 30 minutes from Lisbon.</p>
+            </div>
+          </div>
+
+          <!-- Duration -->
+          <div class="rounded-2xl bg-white p-6 shadow-soft border border-slate-100 flex flex-col justify-between">
+            <div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-50 text-sky-700 text-2xl mb-4">
+                ⏱️
+              </div>
+              <h3 class="font-display text-lg font-bold text-brand-navy">Duration</h3>
+              <p class="mt-2 text-sm text-slate-600">Approximately 1h30 hours of instruction and practice.</p>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="rounded-2xl bg-white p-6 shadow-soft border border-slate-100 flex flex-col justify-between">
+            <div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-50 text-sky-700 text-2xl mb-4">
+                🗣️
+              </div>
+              <h3 class="font-display text-lg font-bold text-brand-navy">Languages</h3>
+              <p class="mt-2 text-sm text-slate-600">Conducted in English and Portuguese.</p>
+            </div>
+          </div>
+
+          <!-- Equipment -->
+          <div class="rounded-2xl bg-white p-6 shadow-soft border border-slate-100 flex flex-col justify-between">
+            <div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-50 text-sky-700 text-2xl mb-4">
+                🏊
+              </div>
+              <h3 class="font-display text-lg font-bold text-brand-navy">Equipment</h3>
+              <p class="mt-2 text-sm text-slate-600">Wetsuit, goggles, swim cap and safety buoy are required.</p>
+            </div>
+          </div>
+
+          <!-- Meeting point -->
+          <div class="rounded-2xl bg-white p-6 shadow-soft border border-slate-100 flex flex-col justify-between">
+            <div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-50 text-sky-700 text-2xl mb-4">
+                ✉️
+              </div>
+              <h3 class="font-display text-lg font-bold text-brand-navy">Meeting point</h3>
+              <p class="mt-2 text-sm text-slate-600">Shared directly with you after registration confirmation.</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="register" class="bg-white py-20">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-3xl text-center">
-            <p class="text-sm font-extrabold uppercase tracking-[0.35em] text-sky-700">
-              Pre-register for Iron4Fun Cascais
-            </p>
-            <h2 class="mt-3 font-display text-4xl font-extrabold text-brand-navy">
-              Complete the form below and we will confirm availability.
-            </h2>
-            <p class="mt-4 text-slate-600">
-              We will send all details after validating your preferred session and swim profile.
-            </p>
+    <section id="included" class="bg-white py-20">
+      <div
+        class="mx-auto grid max-w-7xl gap-0 overflow-hidden rounded-[2rem] bg-slate-50 shadow-soft lg:grid-cols-[1.15fr_0.85fr]">
+        <div class="px-8 py-10 md:px-12">
+          <p class="text-sm font-extrabold uppercase tracking-[0.3em] text-sky-700">
+            What's included?
+          </p>
+          <div class="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+            <div>
+              <p class="font-bold text-brand-navy">Guided open water swim</p>
+              <p class="mt-2 text-sm text-slate-600">Guided reconnaissance sessions on the swim course.</p>
+            </div>
+            <div>
+              <p class="font-bold text-brand-navy">Course familiarisation</p>
+              <p class="mt-2 text-sm text-slate-600">Start, exit and sighting strategy review.</p>
+            </div>
+            <div>
+              <p class="font-bold text-brand-navy">Local navigation tips</p>
+              <p class="mt-2 text-sm text-slate-600">Positioning, landmarks and buoy approach.</p>
+            </div>
+            <div>
+              <p class="font-bold text-brand-navy">Ocean reading guidance</p>
+              <p class="mt-2 text-sm text-slate-600">How wind, swell, currents and tides may affect your swim line.</p>
+            </div>
+            <div>
+              <p class="font-bold text-brand-navy">Coach briefing</p>
+              <p class="mt-2 text-sm text-slate-600">Session plan and pacing before entering.</p>
+            </div>
+            <div>
+              <p class="font-bold text-brand-navy">Safety support</p>
+              <p class="mt-2 text-sm text-slate-600">Monitored swim with clear group structure.</p>
+            </div>
+            <div>
+              <p class="font-bold text-brand-navy">Community experience</p>
+              <p class="mt-2 text-sm text-slate-600">Train with athletes preparing for the same race.</p>
+            </div>
+            <div>
+              <p class="font-bold text-brand-navy">Post-session Q&amp;A</p>
+              <p class="mt-2 text-sm text-slate-600">Debrief, next steps and confidence building.</p>
+            </div>
           </div>
+        </div>
+        <div id="coach" class="grid bg-white md:grid-cols-[0.95fr_1.05fr] lg:grid-cols-1 xl:grid-cols-[0.95fr_1.05fr]">
+          <div class="min-h-[360px] bg-coach-photo bg-cover bg-center"></div>
+          <div class="px-8 py-10">
+            <p class="text-sm font-extrabold uppercase tracking-[0.3em] text-sky-700">
+              Meet your coach
+            </p>
+            <h3 class="mt-3 font-display text-4xl font-extrabold text-brand-navy">
+              Bibiana Farias
+            </h3>
+            <p class="mt-4 text-lg font-semibold text-slate-700">
+              Open water swimming coach and founder of Swim4fun.
+            </p>
+            <p class="mt-4 leading-relaxed text-slate-600">
+              She has guided more than 200 athletes in their open water
+              challenges and regularly organizes training events for
+              long-distance preparation.
+            </p>
+            <p class="mt-4 leading-relaxed text-slate-600">
+              Bibiana competes in the Portuguese National Open Water Circuit
+              and has raced at 70.3 and full distance events herself.
+            </p>
+            <a href="#register"
+              class="mt-6 inline-flex text-sm font-extrabold uppercase tracking-[0.15em] text-sky-700 transition hover:text-brand-navy">
+              Learn more about Bibiana →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <form id="contactForm" class="mt-12 rounded-[2rem] bg-slate-50 p-6 shadow-soft md:p-8">
-            <!-- Invisible Honeypot -->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-              <input type="text" name="b_website" tabindex="-1" value="" autocomplete="off" />
-            </div>
+    <section id="pricing" class="bg-slate-100 py-20">
+      <div class="mx-auto max-w-5xl px-6 lg:px-8">
+        <div class="text-center">
+          <p class="text-sm font-extrabold uppercase tracking-[0.35em] text-sky-700">
+            Pricing
+          </p>
+        </div>
 
-            <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              <!-- Nome Completo -->
-              <label class="block">
-                <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">Nome Completo / Full Name <span class="text-red-500">*</span></span>
-                <input class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500" type="text" name="nome" placeholder="Seu nome completo" required />
-              </label>
-
-              <!-- NIF/ Passaport -->
-              <label class="block">
-                <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">NIF/ Passaport <span class="text-red-500">*</span></span>
-                <input class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500" type="text" name="nif" placeholder="NIF ou Passaporte" required />
-              </label>
-
-              <!-- WhatsApp -->
-              <label class="block">
-                <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">WhatsApp <span class="text-red-500">*</span></span>
-                <input class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500" type="tel" name="whatsapp" placeholder="Ex: +351 912 345 678" required />
-                <span class="mt-1 block text-xs text-slate-400">Indicativo do país + número / Country Code + Number</span>
-              </label>
-
-              <!-- Email -->
-              <label class="block">
-                <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">Email <span class="text-red-500">*</span></span>
-                <input class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500" type="email" name="email" placeholder="name@email.com" required />
-              </label>
-
-              <!-- Data de nascimento -->
-              <label class="block">
-                <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">Data de nascimento / Birthday <span class="text-red-500">*</span></span>
-                <input class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500" type="date" name="data_nascimento" required />
-              </label>
-
-              <!-- Contacto de Emergência -->
-              <label class="block">
-                <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">Contacto de Emergência <span class="text-red-500">*</span></span>
-                <input class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500" type="text" name="contato_emergencia" placeholder="Nome e contacto / Emergency Contact" required />
-              </label>
-
-              <!-- Tipo de participação -->
-              <label class="block">
-                <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">Tipo de participação / Participation type <span class="text-red-500">*</span></span>
-                <select name="tipo_participacao" class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500" required>
-                  <option value="" disabled selected>Escolha uma opção / Choose one</option>
-                  <option value="Aluno ou Sócio da Swim4fun / Swim4fun Member">Aluno ou Sócio da Swim4fun / Swim4fun Member</option>
-                  <option value="Público externo / External participant">Público externo / External participant</option>
-                </select>
-              </label>
-
-              <!-- Seguro -->
-              <label class="block">
-                <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">Seguro / Insurance <span class="text-red-500">*</span></span>
-                <select name="seguro" class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500" required>
-                  <option value="" disabled selected>Escolha uma opção / Choose one</option>
-                  <option value="Quero contratar o seguro pela Swim4fun / I want to get the insurance through Swim4fun">Quero contratar o seguro pela Swim4fun / I want to get the insurance through Swim4fun</option>
-                  <option value="Já tenho da escola Swim4fun / I already have Swim4fun insurance.">Já tenho da escola Swim4fun / I already have Swim4fun insurance.</option>
-                  <option value="Já tenho da Federação Portuguesa de Natação / I already have from FPN">Já tenho da Federação Portuguesa de Natação / I already have from FPN</option>
-                  <option value="Já tenho da Federação de Triatlo de Portugal / I already have  from FTP">Já tenho da Federação de Triatlo de Portugal / I already have  from FTP</option>
-                </select>
-              </label>
-
-              <!-- Instagram -->
-              <label class="block">
-                <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">O teu Instagram / Your Instagram</span>
-                <input class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500" type="text" name="instagram" placeholder="@seu_perfil" />
-                <span class="mt-1 block text-xs text-slate-400">Para te identificarmos / Leave your @</span>
-              </label>
-            </div>
-
-            <!-- Escolha os teus treinos (checkbox group) -->
-            <div class="mt-6 border-t border-slate-200 pt-6">
-              <span class="mb-3 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">Escolha os teus treinos / Choose your training sessions <span class="text-red-500">*</span></span>
-              <div class="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
-                <label class="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 cursor-pointer hover:border-sky-300 transition">
-                  <input type="checkbox" name="treinos" value="Half -  02/08" class="h-4 w-4 rounded border-slate-300 text-sky-700 focus:ring-sky-500" />
-                  <span class="text-sm font-medium text-slate-700">Half - 02/08</span>
-                </label>
-                <label class="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 cursor-pointer hover:border-sky-300 transition">
-                  <input type="checkbox" name="treinos" value="Half - 13/09" class="h-4 w-4 rounded border-slate-300 text-sky-700 focus:ring-sky-500" />
-                  <span class="text-sm font-medium text-slate-700">Half - 13/09</span>
-                </label>
-                <label class="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 cursor-pointer hover:border-sky-300 transition">
-                  <input type="checkbox" name="treinos" value="Half  - 11/10" class="h-4 w-4 rounded border-slate-300 text-sky-700 focus:ring-sky-500" />
-                  <span class="text-sm font-medium text-slate-700">Half - 11/10</span>
-                </label>
-                <label class="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 cursor-pointer hover:border-sky-300 transition">
-                  <input type="checkbox" name="treinos" value="Half  14/10" class="h-4 w-4 rounded border-slate-300 text-sky-700 focus:ring-sky-500" />
-                  <span class="text-sm font-medium text-slate-700">Half - 14/10</span>
-                </label>
-                <label class="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 cursor-pointer hover:border-sky-300 transition">
-                  <input type="checkbox" name="treinos" value="Full - 23/08" class="h-4 w-4 rounded border-slate-300 text-sky-700 focus:ring-sky-500" />
-                  <span class="text-sm font-medium text-slate-700">Full - 23/08</span>
-                </label>
-                <label class="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 cursor-pointer hover:border-sky-300 transition">
-                  <input type="checkbox" name="treinos" value="Full - 04/10" class="h-4 w-4 rounded border-slate-300 text-sky-700 focus:ring-sky-500" />
-                  <span class="text-sm font-medium text-slate-700">Full - 04/10</span>
-                </label>
+        <div class="mt-8 grid gap-6 lg:grid-cols-2">
+          <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+            <h3 class="font-display text-3xl font-extrabold text-brand-navy">
+              IRON4FUN 70.3
+            </h3>
+            <p class="mt-2 text-slate-600">
+              For athletes preparing for the 1.9 km swim.
+            </p>
+            <div class="mt-8 grid grid-cols-2 gap-4 border-t border-slate-200 pt-6">
+              <div>
+                <p class="text-sm font-bold uppercase tracking-[0.15em] text-slate-400">
+                  Swim4fun athletes &amp; members
+                </p>
+                <p class="mt-3 text-5xl font-extrabold text-brand-navy">15€</p>
+              </div>
+              <div>
+                <p class="text-sm font-bold uppercase tracking-[0.15em] text-slate-400">
+                  International and external athletes
+                </p>
+                <p class="mt-3 text-5xl font-extrabold text-brand-navy">25€</p>
               </div>
             </div>
+            <a href="#register"
+              class="mt-8 inline-flex rounded-full bg-brand-gold px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-brand-navy transition hover:-translate-y-0.5">
+              Pre-register for 70.3
+            </a>
+          </article>
 
-            <!-- Termo de responsabilidade -->
-            <div class="mt-6 border-t border-slate-200 pt-6">
-              <label class="flex items-start gap-3 text-sm text-slate-600">
-                <input type="checkbox" name="termo_responsabilidade" class="mt-1 h-4 w-4 rounded border-slate-300 text-sky-700 focus:ring-sky-500" required />
-                <span>Declaro estar apto(a) para a prática de natação em águas abertas e assumo responsabilidade pela minha participação. <span class="text-red-500">*</span></span>
-              </label>
+          <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+            <h3 class="font-display text-3xl font-extrabold text-brand-navy">
+              IRON4FUN Full
+            </h3>
+            <p class="mt-2 text-slate-600">
+              For athletes preparing for the 3.8 km swim.
+            </p>
+            <div class="mt-8 grid grid-cols-2 gap-4 border-t border-slate-200 pt-6">
+              <div>
+                <p class="text-sm font-bold uppercase tracking-[0.15em] text-slate-400">
+                  Swim4fun athletes &amp; members
+                </p>
+                <p class="mt-3 text-5xl font-extrabold text-brand-navy">25€</p>
+              </div>
+              <div>
+                <p class="text-sm font-bold uppercase tracking-[0.15em] text-slate-400">
+                  International and external athletes
+                </p>
+                <p class="mt-3 text-5xl font-extrabold text-brand-navy">35€</p>
+              </div>
             </div>
-
-            <p id="status" class="mt-4 text-center font-bold text-sm"></p>
-
-            <div class="mt-8 text-center">
-              <button
-                type="submit"
-                class="rounded-full bg-brand-gold px-10 py-4 text-sm font-extrabold uppercase tracking-[0.2em] text-brand-navy transition hover:-translate-y-0.5"
-              >
-                Enviar pré-inscrição
-              </button>
-            </div>
-          </form>
-
-          <script>
-            const form = document.getElementById("contactForm");
-            const status = document.getElementById("status");
-
-            const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwXVM1TRlLd7L5Fxib8BrHXse8aL0qdcWDNH80wtIaf5N7RaDY6cUer7b9Kq7kGlq05Kg/exec";
-            const pageLoadTime = Date.now();
-
-            form.addEventListener("submit", async function (e) {
-              e.preventDefault();
-
-              // 1. Honeypot prevention
-              const honeypot = form.querySelector('input[name="b_website"]').value;
-              if (honeypot) {
-                console.warn("Submission blocked: Honeypot field filled");
-                status.style.color = "#15803d"; // text-green-700
-                status.innerText = "Pré-inscrição enviada com sucesso!";
-                form.reset();
-                return;
-              }
-
-              // 2. Timing check (prevent bots submitting too fast)
-              const secondsElapsed = (Date.now() - pageLoadTime) / 1000;
-              if (secondsElapsed < 3.0) {
-                console.warn("Submission blocked: Submitted too fast (probably a bot)");
-                status.style.color = "#b91c1c"; // text-red-700
-                status.innerText = "Erro ao enviar. Tente novamente.";
-                return;
-              }
-
-              // 3. Validation: At least one training session selected
-              const checkedTreinos = Array.from(form.querySelectorAll('input[name="treinos"]:checked')).map(cb => cb.value);
-              if (checkedTreinos.length === 0) {
-                status.style.color = "#b91c1c"; // text-red-700
-                status.innerText = "Por favor, selecione pelo menos um treino / Please select at least one training session.";
-                return;
-              }
-
-              // 4. Gather data
-              const formData = new FormData(form);
-              const data = {
-                nome: formData.get("nome"),
-                nif: formData.get("nif"),
-                whatsapp: formData.get("whatsapp"),
-                email: formData.get("email"),
-                data_nascimento: formData.get("data_nascimento"),
-                contato_emergencia: formData.get("contato_emergencia"),
-                tipo_participacao: formData.get("tipo_participacao"),
-                treinos: checkedTreinos,
-                seguro: formData.get("seguro"),
-                termo_responsabilidade: formData.get("termo_responsabilidade") ? "Sim" : "Não",
-                instagram: formData.get("instagram") || ""
-              };
-
-              status.style.color = "#0f172a"; // text-slate-900
-              status.innerText = "A enviar pré-inscrição... / Submitting...";
-
-              try {
-                await fetch(SCRIPT_URL, {
-                  method: "POST",
-                  mode: "no-cors",
-                  headers: {
-                    "Content-Type": "application/json"
-                  },
-                  body: JSON.stringify(data)
-                });
-
-                status.style.color = "#15803d"; // text-green-700
-                status.innerText = "Pré-inscrição enviada com sucesso!";
-                form.reset();
-
-              } catch (error) {
-                status.style.color = "#b91c1c"; // text-red-700
-                status.innerText = "Erro ao enviar. Tente novamente.";
-                console.error(error);
-              }
-            });
-          </script>
+            <a href="#register"
+              class="mt-8 inline-flex rounded-full bg-brand-gold px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-brand-navy transition hover:-translate-y-0.5">
+              Pre-register for Full
+            </a>
+          </article>
         </div>
-      </section>
-    </main>
-  </body>
+
+        <p class="mt-6 text-center text-sm text-slate-500">
+          Insurance may be required if not already active. Payment details are sent after pre-registration validation.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="text-center">
+          <p class="text-sm font-extrabold uppercase tracking-[0.35em] text-sky-700">
+            How it works
+          </p>
+        </div>
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="rounded-[1.75rem] bg-slate-50 p-6 text-center shadow-soft">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-sky-100 text-2xl">1</div>
+            <h3 class="mt-5 font-display text-xl font-extrabold text-brand-navy">Pre-register</h3>
+            <p class="mt-3 text-slate-600">Fill in the form with your race distance, preferred date and open water
+              experience.</p>
+          </article>
+          <article class="rounded-[1.75rem] bg-slate-50 p-6 text-center shadow-soft">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-sky-100 text-2xl">2</div>
+            <h3 class="mt-5 font-display text-xl font-extrabold text-brand-navy">We validate your spot</h3>
+            <p class="mt-3 text-slate-600">We confirm availability, level group, insurance needs and sea-condition
+              planning.</p>
+          </article>
+          <article class="rounded-[1.75rem] bg-slate-50 p-6 text-center shadow-soft">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-sky-100 text-2xl">3</div>
+            <h3 class="mt-5 font-display text-xl font-extrabold text-brand-navy">Payment confirmation</h3>
+            <p class="mt-3 text-slate-600">You receive the payment details and your place is confirmed after payment.
+            </p>
+          </article>
+          <article class="rounded-[1.75rem] bg-slate-50 p-6 text-center shadow-soft">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-sky-100 text-2xl">4</div>
+            <h3 class="mt-5 font-display text-xl font-extrabold text-brand-navy">Join the session group</h3>
+            <p class="mt-3 text-slate-600">You receive all details: meeting point, schedule, equipment and briefing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-100">
+      <div class="mx-auto grid max-w-7xl lg:grid-cols-[1fr_1.05fr]">
+        <div class="bg-shore-photo bg-cover bg-center px-8 py-16 text-white md:px-12">
+          <h2 class="max-w-sm font-display text-4xl font-extrabold uppercase leading-tight">
+            Arrive at the start line with confidence.
+          </h2>
+          <p class="mt-5 max-w-md text-lg text-slate-100">
+            Train the course. Understand the ocean. Race prepared.
+          </p>
+          <a href="#register"
+            class="mt-8 inline-flex rounded-full bg-brand-gold px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-brand-navy transition hover:-translate-y-0.5">
+            Pre-register now
+          </a>
+          <p class="mt-4 text-sm text-slate-200">
+            Limited spots. Minimum group: 10 athletes.
+          </p>
+        </div>
+
+        <div id="faq" class="bg-white px-8 py-16 md:px-12">
+          <p class="text-sm font-extrabold uppercase tracking-[0.3em] text-sky-700">
+            FAQ
+          </p>
+          <div class="mt-8 divide-y divide-slate-200 rounded-[1.5rem] border border-slate-200">
+            <details class="group p-5" open>
+              <summary class="flex cursor-pointer list-none items-center justify-between font-bold text-brand-navy">
+                Is Iron4Fun an official IRONMAN activity?
+                <span class="text-2xl text-sky-700 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-4 text-slate-600">No. It is an independent guided swim training session designed to help
+                athletes prepare safely for race day.</p>
+            </details>
+            <details class="group p-5">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-bold text-brand-navy">
+                Can international athletes join?
+                <span class="text-2xl text-sky-700 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-4 text-slate-600">Yes. Sessions welcome athletes from across Europe and beyond, as long as
+                they meet the required swim level.</p>
+            </details>
+            <details class="group p-5">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-bold text-brand-navy">
+                Do I need to be a Swim4fun member?
+                <span class="text-2xl text-sky-700 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-4 text-slate-600">No. Members receive a special rate, but external athletes are welcome.</p>
+            </details>
+            <details class="group p-5">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-bold text-brand-navy">
+                Do I need a wetsuit?
+                <span class="text-2xl text-sky-700 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-4 text-slate-600">Usually yes, depending on the season and water temperature. Final guidance
+                is shared before your session.</p>
+            </details>
+            <details class="group p-5">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-bold text-brand-navy">
+                What level do I need?
+                <span class="text-2xl text-sky-700 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-4 text-slate-600">You should be comfortable swimming the chosen distance continuously in open
+                water. The form helps us group athletes correctly.</p>
+            </details>
+            <details class="group p-5">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-bold text-brand-navy">
+                Are places limited?
+                <span class="text-2xl text-sky-700 transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-4 text-slate-600">Yes. Each session has a maximum group size to preserve safety and coaching
+                quality.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="register" class="bg-white py-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="text-sm font-extrabold uppercase tracking-[0.35em] text-sky-700">
+            Pre-register for Iron4Fun Cascais
+          </p>
+          <h2 class="mt-3 font-display text-4xl font-extrabold text-brand-navy">
+            Complete the form below and we will confirm availability.
+          </h2>
+          <p class="mt-4 text-slate-600">
+            We will send all details after validating your preferred session and swim profile.
+          </p>
+        </div>
+
+        <form id="contactForm" class="mt-12 rounded-[2rem] bg-slate-50 p-6 shadow-soft md:p-8">
+          <!-- Invisible Honeypot -->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_website" tabindex="-1" value="" autocomplete="off" />
+          </div>
+
+          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Full Name -->
+            <label class="block">
+              <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">Full Name <span
+                  class="text-red-500">*</span></span>
+              <input
+                class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500"
+                type="text" name="nome" placeholder="Your full name" required />
+            </label>
+
+            <!-- Email -->
+            <label class="block">
+              <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">Email <span
+                  class="text-red-500">*</span></span>
+              <input
+                class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500"
+                type="email" name="email" placeholder="name@email.com" required />
+            </label>
+
+            <!-- WhatsApp -->
+            <label class="block">
+              <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">WhatsApp <span
+                  class="text-red-500">*</span></span>
+              <input
+                class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500"
+                type="tel" name="whatsapp" placeholder="e.g. +351 912 345 678" required />
+              <span class="mt-1 block text-xs text-slate-400">Include country code</span>
+            </label>
+
+            <!-- Country of Residence -->
+            <label class="block">
+              <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">Country of Residence
+                <span class="text-red-500">*</span></span>
+              <input
+                class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500"
+                type="text" name="pais_residencia" placeholder="e.g. United Kingdom, Germany" required />
+            </label>
+
+            <!-- Race Distance -->
+            <label class="block">
+              <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">Race Distance <span
+                  class="text-red-500">*</span></span>
+              <select name="race_distance"
+                class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500"
+                required>
+                <option value="" disabled selected>Select distance</option>
+                <option value="70.3">70.3 (Half)</option>
+                <option value="Full">Full (140.6)</option>
+              </select>
+            </label>
+
+            <!-- Preferred Session Date -->
+            <label class="block">
+              <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">Preferred Session
+                Date <span class="text-red-500">*</span></span>
+              <select name="preferred_date"
+                class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500"
+                required>
+                <option value="" disabled selected>Select a date</option>
+                <option value="Half -  02/08">02 August - 70.3 (1.9 KM)</option>
+                <option value="Full - 23/08">23 August - Full (3.8 KM)</option>
+                <option value="Half - 13/09">13 September - 70.3 (1.9 KM)</option>
+                <option value="Full - 04/10">04 October - Full (3.8 KM)</option>
+                <option value="Half  - 11/10">11 October - 70.3 (1.9 KM)</option>
+                <option value="Half  14/10">14 October - 70.3 (1.9 KM)</option>
+              </select>
+            </label>
+
+            <!-- Open-water Experience -->
+            <label class="block md:col-span-2 lg:col-span-3">
+              <span class="mb-2 block text-sm font-bold uppercase tracking-[0.12em] text-slate-500">Open-water
+                Experience <span class="text-red-500">*</span></span>
+              <select name="open_water_experience"
+                class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-sky-500"
+                required>
+                <option value="" disabled selected>Select your open-water experience level</option>
+                <option value="I am preparing for my first open-water triathlon">I am preparing for my first open-water
+                  triathlon</option>
+                <option value="I can comfortably swim 1.9 km in open water">I can comfortably swim 1.9 km in open water
+                </option>
+                <option value="I can comfortably swim 3.8 km in open water">I can comfortably swim 3.8 km in open water
+                </option>
+                <option value="I regularly train and race in open water">I regularly train and race in open water
+                </option>
+              </select>
+            </label>
+          </div>
+
+          <p id="status" class="mt-4 text-center font-bold text-sm"></p>
+
+          <div class="mt-8 text-center">
+            <button type="submit"
+              class="rounded-full bg-brand-gold px-10 py-4 text-sm font-extrabold uppercase tracking-[0.2em] text-brand-navy transition hover:-translate-y-0.5">
+              Send pre-registration
+            </button>
+          </div>
+
+          <!-- Independent Activity Disclaimer -->
+          <div class="mt-6 border-t border-slate-200 pt-4 text-center">
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Iron4fun created by Swim4fun is an independent training experience and is not affiliated with or endorsed
+              by
+              IRONMAN.
+            </p>
+          </div>
+        </form>
+
+        <script>
+          const form = document.getElementById("contactForm");
+          const status = document.getElementById("status");
+
+          const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwXVM1TRlLd7L5Fxib8BrHXse8aL0qdcWDNH80wtIaf5N7RaDY6cUer7b9Kq7kGlq05Kg/exec";
+          const pageLoadTime = Date.now();
+
+          form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            // 1. Honeypot prevention
+            const honeypot = form.querySelector('input[name="b_website"]').value;
+            if (honeypot) {
+              console.warn("Submission blocked: Honeypot field filled");
+              status.style.color = "#15803d"; // text-green-700
+              status.innerText = "Pre-registration submitted successfully!";
+              form.reset();
+              return;
+            }
+
+            // 2. Timing check (prevent bots submitting too fast)
+            const secondsElapsed = (Date.now() - pageLoadTime) / 1000;
+            if (secondsElapsed < 3.0) {
+              console.warn("Submission blocked: Submitted too fast (probably a bot)");
+              status.style.color = "#b91c1c"; // text-red-700
+              status.innerText = "Error submitting. Please try again.";
+              return;
+            }
+
+            // 3. Gather data
+            const formData = new FormData(form);
+            const data = {
+              nome: formData.get("nome"),
+              email: formData.get("email"),
+              whatsapp: formData.get("whatsapp"),
+              pais_residencia: formData.get("pais_residencia"),
+              race_distance: formData.get("race_distance"),
+              treinos: [formData.get("preferred_date")], // Send as array to maintain compatibility with backend
+              open_water_experience: formData.get("open_water_experience")
+            };
+
+            status.style.color = "#0f172a"; // text-slate-900
+            status.innerText = "Submitting...";
+
+            try {
+              await fetch(SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                  "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+              });
+
+              status.style.color = "#15803d"; // text-green-700
+              status.innerText = "Pre-registration submitted successfully!";
+              form.reset();
+
+            } catch (error) {
+              status.style.color = "#b91c1c"; // text-red-700
+              status.innerText = "Error submitting. Please try again.";
+              console.error(error);
+            }
+          });
+        </script>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
