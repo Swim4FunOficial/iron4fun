@@ -889,6 +889,12 @@
     background-image: radial-gradient(circle at top, rgba(17, 70, 118, .7), rgba(8, 40, 75, .98) 58%);
   }
 }
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #08284C;
+    color: #f8f9fa;
+  }
+}
 @property --tw-divide-y-reverse {
   syntax: "*";
   inherits: false;
