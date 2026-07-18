@@ -1,9 +1,12 @@
 # Dependencies
 node_modules/
-*.npm
-*.lock
 
-# Environment variables
+# Tailwind / Build
+input.css
+package.json
+package-lock.json
+
+# Environment
 .env
 .env.local
 .env.*.local
@@ -19,15 +22,15 @@ node_modules/
 .DS_Store
 Thumbs.db
 
-# Build
-dist/
-build/
-out/
-
 # Logs
 logs/
 *.log
 npm-debug.log*
+
+# Build folders
+dist/
+build/
+out/
 
 # Misc
 .cache/
