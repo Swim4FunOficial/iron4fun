@@ -57,7 +57,8 @@
         <a class="transition hover:text-brand-gold" href="#faq">FAQ</a>
       </nav>
       <a href="#register"
-        class="rounded-full bg-brand-gold px-5 py-3 text-sm font-extrabold uppercase tracking-[0.15em] text-brand-navy transition hover:scale-[1.02]">
+        class="rounded-full bg-brand-gold px-5 py-3 text-sm font-extrabold uppercase tracking-[0.15em] text-brand-navy transition hover:scale-[1.02]"
+        onclick="gtag('event','cta_click',{event_category:'navigation',event_label:'header'})">
         Pre-register now
       </a>
     </div>
@@ -114,7 +115,8 @@
 
           <div class="mt-10 flex flex-wrap gap-4">
             <a href="#register"
-              class="w-full text-center rounded-full bg-brand-gold px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-brand-navy shadow-soft transition hover:-translate-y-0.5">
+              class="w-full text-center rounded-full bg-brand-gold px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-brand-navy shadow-soft transition hover:-translate-y-0.5"
+              onclick="gtag('event','cta_click',{event_category:'navigation',event_label:'hero'})">
               Pre-register now
             </a>
             <a href="#dates"
@@ -494,7 +496,8 @@
             Train the course. Understand the ocean. Race prepared.
           </p>
           <a href="#register"
-            class="mt-8 inline-flex rounded-full bg-brand-gold px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-brand-navy transition hover:-translate-y-0.5">
+            class="mt-8 inline-flex rounded-full bg-brand-gold px-7 py-4 text-sm font-extrabold uppercase tracking-[0.18em] text-brand-navy transition hover:-translate-y-0.5"
+            onclick="gtag('event','cta_click',{event_category:'navigation',event_label:'mid_page'})">
             Pre-register now
           </a>
           <p class="mt-4 text-sm text-slate-200">
@@ -779,6 +782,13 @@
             status.style.color = "#0f172a"; // text-slate-900
             status.innerText = "Submitting...";
 
+            // GA4: form submit attempt
+            gtag('event', 'form_submit_attempt', {
+              event_category: 'registration',
+              event_label: 'pre_registration_form',
+              race_distance: data.race_distance
+            });
+
             try {
               await fetch(SCRIPT_URL, {
                 method: "POST",
@@ -787,6 +797,13 @@
                   "Content-Type": "application/json"
                 },
                 body: JSON.stringify(data)
+              });
+
+              // GA4: form submit success
+              gtag('event', 'form_submit_success', {
+                event_category: 'registration',
+                event_label: 'pre_registration_form',
+                race_distance: data.race_distance
               });
 
               status.style.color = "#15803d"; // text-green-700
